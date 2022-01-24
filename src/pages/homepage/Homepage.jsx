@@ -3,7 +3,7 @@ import Directory from "../../components/directory/Directory";
 
 import "./homepage.scss";
 
-export const HomePage = () => {
+const HomePage = () => {
     return (
         <div className="homepage">
             <h1>Bienvenido al e-shop</h1>
@@ -11,3 +11,5 @@ export const HomePage = () => {
         </div>
     );
 };
+
+export default HomePage;
