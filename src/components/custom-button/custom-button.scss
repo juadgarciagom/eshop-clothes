@@ -13,10 +13,26 @@
     font-weight: bolder;
     border: none;
     cursor: pointer;
+    margin: 10px auto;
   
     &:hover {
       background-color: white;
       color: black;
       border: 1px solid black;
+    }
+
+    &.google-sign-in {
+      background-color: white;
+      color: black;
+      border: black solid;
+      border-width: thin;
+      padding: 0 10px;
+      display: flex;
+      justify-content: space-between;
+
+      &:hover {
+        background-color: whitesmoke;
+        border: none;
+      }
     }
   }

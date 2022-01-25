@@ -1,6 +1,8 @@
 import React from "react";
+import { signInWithGoogle } from "../../firebase/firebase.utils";
 import CustomButton from "../custom-button/CustomButton";
 import FormInput from "../form-input/FormInput";
+import { ReactComponent as Logo } from "../../assets/img/google.svg";
 
 import '../sign-in/sign-in.scss'
 
@@ -51,8 +53,14 @@ class SignIn extends React.Component {
                         required
                     />
              
+                    <div className="buttons">
+                        <CustomButton type="submit">Iniciar Sesión</CustomButton>
+                        <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
+                            Google
+                            <Logo className="logo-google" />
+                        </CustomButton>
 
-                    <CustomButton type="submit">Iniciar Sesión</CustomButton>
+                    </div>
                 </form>
             </div>
         );
