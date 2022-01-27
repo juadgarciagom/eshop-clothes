@@ -10,7 +10,7 @@ import ShopPage from "./pages/shop/ShopPage";
 import SignPage from "./pages/sign/SignPage";
 import ContactPage from "./pages/contact/ContactPage";
 
-import { setCurrentUser } from "./redux/actions/userActions";
+import { setCurrentUser } from "./redux/actions/UserActions";
 
 import "./App.css";
 

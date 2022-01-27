@@ -6,13 +6,24 @@ import { auth } from "../../firebase/firebase.utils";
 import { ReactComponent as Logo } from "../../assets/img/crown.svg";
 
 import "../header/header.scss";
+import CartIcon from "../cart-icon/CartIcon";
+import CartDropdown from "../cart-dropdown/CartDropdown";
 
 //Current user refers to de root reducer and then the user referes to the user reducer when we have the current user
 const mapStateToProps = state => ({
-    currentUser: state.user.currentUser
+    currentUser: state.user.currentUser,
+    hidden: state.cart.hidden
 })
 
-const Header = ({ currentUser }) => {
+//Destructuring the state looks like this
+
+// const mapStateToProps = ({user: {currentUser}, cart: {hidden}}) => ({
+//     currentUser,
+//     hidden
+// }) 
+
+
+const Header = ({ currentUser, hidden }) => {
     
     return (
         <div className="header">
@@ -36,7 +47,10 @@ const Header = ({ currentUser }) => {
                         Sign In
                     </Link>
                 )}
+                <CartIcon />
             </div>
+            {hidden ? null : <CartDropdown />}
+            
         </div>
     );
 };

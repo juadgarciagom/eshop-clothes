@@ -1,7 +1,7 @@
 //The first is made the initial state this for larger projects is made in a folder of constants with action types or
 //enviroment constants or API constants.... etc
 
-import { UserActionTypes } from "../constants/user-types";
+import { UserActionTypes } from "../constants/UserTypes";
 
 const INITIAL_STATE = {
     currentUser: null
