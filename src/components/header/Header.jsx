@@ -1,10 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { auth } from "../../firebase/firebase.utils";
+import { connect } from "react-redux";
 
+import { auth } from "../../firebase/firebase.utils";
 import { ReactComponent as Logo } from "../../assets/img/crown.svg";
 
 import "../header/header.scss";
+
+//Current user refers to de root reducer and then the user referes to the user reducer when we have the current user
+const mapStateToProps = state => ({
+    currentUser: state.user.currentUser
+})
 
 const Header = ({ currentUser }) => {
     
@@ -18,7 +24,7 @@ const Header = ({ currentUser }) => {
                 <Link className="option" to="/shop">
                     Shop
                 </Link>
-                <Link className="option" to="/shop">
+                <Link className="option" to="/contact">
                     Contact
                 </Link>
                 {currentUser ? (
@@ -35,4 +41,4 @@ const Header = ({ currentUser }) => {
     );
 };
 
-export default Header;
+export default connect(mapStateToProps)(Header);
