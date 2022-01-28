@@ -11,6 +11,7 @@ import SignPage from "./pages/sign/SignPage";
 import ContactPage from "./pages/contact/ContactPage";
 
 import { setCurrentUser } from "./redux/actions/UserActions";
+import { selectCurrentUser } from "./redux/selectors/user-selector";
 
 import "./App.css";
 
@@ -72,7 +73,7 @@ class App extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
-    currentUser: state.user.currentUser,
+    currentUser: selectCurrentUser(state),
 });
 
 const mapDispatchToProps = (dispatch) => ({

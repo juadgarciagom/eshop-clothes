@@ -1,19 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
 
 import { auth } from "../../firebase/firebase.utils";
-import { ReactComponent as Logo } from "../../assets/img/crown.svg";
 
-import "../header/header.scss";
 import CartIcon from "../cart-icon/CartIcon";
 import CartDropdown from "../cart-dropdown/CartDropdown";
 
+import { selectCurrentUser } from "../../redux/selectors/user-selector";
+import { selectCartHidden } from "../../redux/selectors/cart-selector";
+
+import { ReactComponent as Logo } from "../../assets/img/crown.svg";
+
+import "../header/header.scss";
+
 //Current user refers to de root reducer and then the user referes to the user reducer when we have the current user
-const mapStateToProps = state => ({
-    currentUser: state.user.currentUser,
-    hidden: state.cart.hidden
-})
+// const mapStateToProps = state => ({
+//     currentUser: state.user.currentUser,
+//     hidden: state.cart.hidden
+// })
 
 //Destructuring the state looks like this
 
@@ -22,6 +28,12 @@ const mapStateToProps = state => ({
 //     hidden
 // }) 
 
+//Selector
+
+const mapStateToProps = createStructuredSelector({  //Create structured selector allows us to no need pass the state this tool search
+    currentUser: selectCurrentUser,                 //the top level state and pass automatically
+    hidden: selectCartHidden
+})
 
 const Header = ({ currentUser, hidden }) => {
     
