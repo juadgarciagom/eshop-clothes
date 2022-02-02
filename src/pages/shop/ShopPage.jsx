@@ -1,30 +1,16 @@
-import React from 'react';
+import React from "react";
+import { Route } from "react-router-dom";
 
-import shopData from './shop_data';
+import CollectionsOverview from "../../components/collections-overview/CollectionsOverview";
+import CategoryPage from "../category/CategoryPage";
 
-import PreviewCollection from '../../components/preview-collection/PreviewCollection';
-
-class ShopPage extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            collections: shopData
-        }
-    }
-
-    render() {
-        const {collections} = this.state;
-        return (
-            <div className='shop-page'>
-                {
-                    collections.map(({id, ...otherItems}) => (
-                        <PreviewCollection key={id} {...otherItems} />
-                    ))
-                }
-            </div>
-        )
-    }
-}
-
+const ShopPage = ({ match }) => {
+    console.log(match);
+    return (
+        <div className="shop-page">
+            <Route exact path={`${match.path}`} component={CollectionsOverview} />
+            <Route path={`${match.path}/:categoryId`} component={CategoryPage} />
+        </div>
+    );
+};
 export default ShopPage;
