@@ -7,7 +7,6 @@ import "./homepage.scss";
 const HomePage = () => {
     return (
         <div className="homepage">
-            <h1>Bienvenido al e-shop</h1>
             <Directory />
         </div>
     );

@@ -1,4 +1,5 @@
 {
+  "homepage": "https://juadgarciagom.github.io/eshop-clothes",
   "name": "e-shop-ropa",
   "version": "0.1.0",
   "private": true,
@@ -22,6 +23,8 @@
   },
   "scripts": {
     "preinstall": "npx npm-force-resolutions",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -48,5 +51,8 @@
   "resolutions": {
     "postcss": "^8.4.5",
     "nth-check": "^2.0.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
   }
 }

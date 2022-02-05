@@ -1,7 +1,7 @@
 const shopData = {
     hats: {
         id: 1,
-        title: "Hats",
+        title: "Gorras",
         routeName: "hats",
         items: [
             {
@@ -62,7 +62,7 @@ const shopData = {
     },
     sneakers: {
         id: 2,
-        title: "Sneakers",
+        title: "Calzado",
         routeName: "sneakers",
         items: [
             {
@@ -117,7 +117,7 @@ const shopData = {
     },
     jackets: {
         id: 3,
-        title: "Jackets",
+        title: "Chaquetas",
         routeName: "jackets",
         items: [
             {
@@ -154,7 +154,7 @@ const shopData = {
     },
     womens: {
         id: 4,
-        title: "Womens",
+        title: "Mujeres",
         routeName: "womens",
         items: [
             {
@@ -203,7 +203,7 @@ const shopData = {
     },
     mens: {
         id: 5,
-        title: "Mens",
+        title: "Hombres",
         routeName: "mens",
         items: [
             {

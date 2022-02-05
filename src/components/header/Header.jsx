@@ -45,18 +45,18 @@ const Header = ({ currentUser, hidden }) => {
 
             <div className="options">
                 <Link className="option" to="/shop">
-                    Shop
+                    Tienda
                 </Link>
                 <Link className="option" to="/contact">
-                    Contact
+                    Contacto
                 </Link>
                 {currentUser ? (
                     <div className="option" onClick={() => auth.signOut()}>
-                        Sign Out
+                        Salir
                     </div>
                 ) : (
                     <Link className="option" to="/signin">
-                        Sign In
+                        Ingresar
                     </Link>
                 )}
                 <CartIcon />
