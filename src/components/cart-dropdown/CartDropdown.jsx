@@ -23,7 +23,7 @@ const CartDropdown = ({ cartItems, history, setCartHidden }) => {
                 )}
             </div>
             <CustomButton onClick={() => {
-                history.push('/checkout')
+                history.push('/eshop-clothes/checkout')
                 setCartHidden()
                 }}>Ir a pagar</CustomButton>
         </div>

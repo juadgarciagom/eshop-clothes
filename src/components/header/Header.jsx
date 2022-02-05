@@ -39,15 +39,15 @@ const Header = ({ currentUser, hidden }) => {
     
     return (
         <div className="header">
-            <Link className="logo-container" to="/">
+            <Link className="logo-container" to="/eshop-clothes">
                 <Logo className="logo" />
             </Link>
 
             <div className="options">
-                <Link className="option" to="/shop">
+                <Link className="option" to="/eshop-clothes/shop">
                     Tienda
                 </Link>
-                <Link className="option" to="/contact">
+                <Link className="option" to="/eshop-clothes/contact">
                     Contacto
                 </Link>
                 {currentUser ? (
@@ -55,7 +55,7 @@ const Header = ({ currentUser, hidden }) => {
                         Salir
                     </div>
                 ) : (
-                    <Link className="option" to="/signin">
+                    <Link className="option" to="/eshop-clothes/signin">
                         Ingresar
                     </Link>
                 )}
