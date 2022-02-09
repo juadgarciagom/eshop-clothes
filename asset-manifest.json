@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/eshop-clothes/static/css/main.a4420014.css",
-    "main.js": "/eshop-clothes/static/js/main.dfd09c31.js",
+    "main.css": "/eshop-clothes/static/css/main.059180d8.css",
+    "main.js": "/eshop-clothes/static/js/main.35b86bf9.js",
     "static/media/shopping-bag.svg": "/eshop-clothes/static/media/shopping-bag.a688874f6f1507316bdfa420328a4a53.svg",
     "static/media/crown.svg": "/eshop-clothes/static/media/crown.3a4e2b15908e7a4c25343677d232b7e6.svg",
     "static/media/google.svg": "/eshop-clothes/static/media/google.305bf1f941967ab4d8960669eb87e994.svg",
     "index.html": "/eshop-clothes/index.html",
-    "main.a4420014.css.map": "/eshop-clothes/static/css/main.a4420014.css.map",
-    "main.dfd09c31.js.map": "/eshop-clothes/static/js/main.dfd09c31.js.map"
+    "main.059180d8.css.map": "/eshop-clothes/static/css/main.059180d8.css.map",
+    "main.35b86bf9.js.map": "/eshop-clothes/static/js/main.35b86bf9.js.map"
   },
   "entrypoints": [
-    "static/css/main.a4420014.css",
-    "static/js/main.dfd09c31.js"
+    "static/css/main.059180d8.css",
+    "static/js/main.35b86bf9.js"
   ]
 }
